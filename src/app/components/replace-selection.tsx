@@ -9,7 +9,7 @@ export default function ReplaceSection() {
   const [to, setTo] = useState("");
   const [text, setText] = useState("");
 
-  // replace → langsung ubah TEXT (single source of truth)
+  //text-area
   const handleReplace = () => {
     const result = replaceWordExact({
       text,
@@ -28,12 +28,10 @@ export default function ReplaceSection() {
 
   return (
     <main className="h-screen flex flex-col mx-auto p-6 gap-4">
-      {/* Title */}
       <h1 className="text-2xl font-semibold">
         Simple Text Editor
       </h1>
 
-      {/* Replace Section */}
       <section className="space-y-2">
         <p className="font-medium">Replace</p>
 
@@ -63,7 +61,6 @@ export default function ReplaceSection() {
         </div>
       </section>
 
-      {/* TEXT AREA — FULL SCREEN PART */}
       <section className="flex flex-col flex-1 gap-2">
         <label className="font-medium">Text</label>
         <textarea
@@ -74,7 +71,6 @@ export default function ReplaceSection() {
         />
       </section>
 
-      {/* Preview */}
       <section className="flex flex-col gap-2">
         <label className="font-medium">Preview</label>
         <textarea
@@ -84,7 +80,6 @@ export default function ReplaceSection() {
         />
       </section>
 
-      {/* Word Count */}
       <p className="text-sm text-gray-600">
         Words: {wordCount}
       </p>
